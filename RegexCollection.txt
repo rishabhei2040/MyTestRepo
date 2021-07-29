@@ -1,0 +1,23 @@
+Regex  for -->
+
+*Not Allowed :
+Number :
+-Lookahead regex  : /(?=\D)/
+-Simple regex : \D+
+-Simpler regex : [^0-9]+
+-Htmlpattern="[^0-9]+"
+-The ultimate : pattern="(?!^\d+$)^.+$"
+, pattern = Model.JavascriptEnabled ? "": @"(?!^\d+$)^.+$" 
+/(?!^\d+$)^.+$/gm
+
+Number Spaces dash and plus and brackets :
+Negative Lookahead : (?!^[- +()]*[0-9][- +()0-9]*$)^.+$
+
+*Allowed : 
+
+Number and Spaces :
+Lookahead : /^(?=.*\d)[\d ]+$/
+
+Number Spaces dash and plus and brackets : 
+Without Lookahead : ^[- +()]*[0-9][- +()0-9]*$
+Lookahead : /^(?=.*[0-9])[- +()0-9]+$/
